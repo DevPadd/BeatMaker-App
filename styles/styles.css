@@ -1,0 +1,240 @@
+/* variables*/
+
+/* styles */
+
+nav {
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls-bar {
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.top-bar {
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin-top: 8rem;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 3rem;
+  height: 3rem;
+  margin: 2rem 0.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.kick-pad {
+  background-color: rgba(224, 83, 83, 0.3);
+}
+
+.snare-pad {
+  background-color: rgba(74, 181, 230, 0.3);
+}
+
+.hihat-pad {
+  background-color: rgba(230, 212, 74, 0.3);
+}
+
+.kick-pad.active {
+  background-color: rgba(224, 83, 83, 1);
+}
+
+.snare-pad.active {
+  background-color: rgba(74, 181, 230, 1);
+}
+
+.hihat-pad.active {
+  background-color: rgba(230, 212, 74, 1);
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+.kick,
+.hihat,
+.snare {
+  display: flex;
+}
+
+.track-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+  font-size: 0.8em;
+}
+
+.track-control h1 {
+  border: 6px solid #1f1f1f;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.track-control button {
+  padding: 0.5rem;
+  color: #1f1f1f;
+  background-color: rgba(0, 0, 0, 0);
+  border: 5px solid #1f1f1f;
+  cursor: pointer;
+  font: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+.mute.active {
+  opacity: 0.5;
+}
+
+.track-control select {
+  width: 10rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+
+  border-radius: 0.5rem;
+
+  color: #1f1f1f;
+  background-color: rgba(0, 0, 0, 0);
+  border: 5px solid #1f1f1f;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.pad:hover {
+  transform: scale(1.2);
+}
+
+.sequencer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.sequencer-controls .play,
+.reset,
+.github-link {
+  margin: 0 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 4rem;
+  border: none;
+  color: #1f1f1f;
+  background-color: rgba(0, 0, 0, 0);
+  border: 5px solid #1f1f1f;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.sequencer-controls button.play {
+  width: 6rem;
+}
+
+.tempo {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tempo .tempo-slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 0.5rem;
+  border-radius: 2rem;
+  margin: 1rem 0rem;
+  cursor: pointer;
+  width: 50%;
+  border: 0.1px solid #1f1f1f;
+}
+
+.tempo-slider::-webkit-slider-thumb,
+.tempo-slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: rgb(65, 182, 236);
+  border: none;
+  cursor: pointer;
+}
+
+.tempo .tempo-number {
+  font-size: 1.5rem;
+}
+
+.tempo h2 {
+  margin-right: 1rem;
+}
+
+/* animations */
+
+@keyframes play-track {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+/* queries */
+
+@media screen and (max-width: 1024px) {
+  .pad {
+    margin: 0 0.2rem;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .sequencer {
+    align-items: flex-start;
+    justify-content: flex-starts;
+  }
+
+  .track-control {
+    margin: none;
+  }
+
+  .track-control h1 {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1rem;
+  }
+}

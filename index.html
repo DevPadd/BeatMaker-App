@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>beatMaker App</title>
+
+    <!-- css file -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+ 
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="top-bar">
+      <h1>BeatMaker App</h1>
+    </nav>
+
+    <div class="sequencer">
+      <div class="kick-track">
+        <div class="track-control">
+          <h1><i class="fas fa-drum"></i> 1</h1>
+
+          <button data-track="kick" class="mute kick-volume">
+            <i class="fas fa-volume-up"></i>
+          </button>
+
+          <select name="kick-select" id="kick-select">
+            <option value="./assets/sounds/kick-acoustic01.wav">
+              Kick acoustic 01
+            </option>
+
+            <option value="./assets/sounds/kick-acoustic02.wav">
+              Kick acoustic 02
+            </option>
+
+            <option value="./assets/sounds/kick-deep.wav">Kick deep</option>
+
+            <option value="./assets/sounds/kick-softy.wav">Kick softy</option>
+
+            <option value="./assets/sounds/kick-heavy.wav">Kick heavy</option>
+          </select>
+        </div>
+
+        <div class="kick">
+          <div class="pad kick-pad b0"></div>
+          <div class="pad kick-pad b1"></div>
+          <div class="pad kick-pad b2"></div>
+          <div class="pad kick-pad b3"></div>
+          <div class="pad kick-pad b4"></div>
+          <div class="pad kick-pad b5"></div>
+          <div class="pad kick-pad b6"></div>
+          <div class="pad kick-pad b7"></div>
+        </div>
+      </div>
+
+      <div class="snare-track">
+        <div class="track-control">
+          <h1><i class="fas fa-drum"></i> 2</h1>
+
+          <button data-track="snare" class="mute snare-volume">
+            <i class="fas fa-volume-up"></i>
+          </button>
+
+          <select name="snare-select" id="snare-select">
+            <option value="./assets/sounds/snare-acoustic01.wav">
+              snare acoustic 01
+            </option>
+
+            <option value="./assets/sounds/snare-acoustic02.wav">
+              snare acoustic 02
+            </option>
+
+            <option value="./assets/sounds/snare-808.wav">snare 808</option>
+
+            <option value="./assets/sounds/snare-big.wav">snare big</option>
+            <option value="./assets/sounds/snare-lofi01.wav">
+              snare lofi 01
+            </option>
+            <option value="./assets/sounds/snare-lofi02.wav">
+              snare lofi 02
+            </option>
+          </select>
+        </div>
+
+        <div class="snare">
+          <div class="pad snare-pad b0"></div>
+          <div class="pad snare-pad b1"></div>
+          <div class="pad snare-pad b2"></div>
+          <div class="pad snare-pad b3"></div>
+          <div class="pad snare-pad b4"></div>
+          <div class="pad snare-pad b5"></div>
+          <div class="pad snare-pad b6"></div>
+          <div class="pad snare-pad b7"></div>
+        </div>
+      </div>
+
+      <div class="hihat-track">
+        <div class="track-control">
+          <h1><i class="fas fa-drum"></i> 3</h1>
+
+          <button data-track="hihat" class="mute hihat-volume">
+            <i class="fas fa-volume-up"></i>
+          </button>
+
+          <select name="hihat-select" id="hihat-select">
+            <option value="./assets/sounds/hihat-acoustic01.wav">
+              hihat acoustic 01
+            </option>
+
+            <option value="./assets/sounds/hihat-acoustic02.wav">
+              hihat acoustic 02
+            </option>
+
+            <option value="./assets/sounds/hihat-808.wav">hihat 808</option>
+            <option value="./assets/sounds/hihat-plain.wav">hihat plain</option>
+            <option value="./assets/sounds/hihat-electro.wav">hihat electro</option>
+            <option value="./assets/sounds/hihat-digital.wav">hihat digital</option>
+          </select>
+        </div>
+
+        <div class="hihat">
+          <div class="pad hihat-pad b0"></div>
+          <div class="pad hihat-pad b1"></div>
+          <div class="pad hihat-pad b2"></div>
+          <div class="pad hihat-pad b3"></div>
+          <div class="pad hihat-pad b4"></div>
+          <div class="pad hihat-pad b5"></div>
+          <div class="pad hihat-pad b6"></div>
+          <div class="pad hihat-pad b7"></div>
+        </div>
+      </div>
+    </div>
+
+      <audio
+        class="kick-sound"
+        src="./assets/sounds/kick-acoustic01.wav"
+      ></audio>
+      <audio
+        class="snare-sound"
+        src="./assets/sounds/snare-acoustic01.wav"
+      ></audio>
+      <audio
+        class="hihat-sound"
+        src="./assets/sounds/hihat-acoustic01.wav"
+      ></audio>
+    </div>
+
+    <nav class="controls-bar">
+      <div class="sequencer-controls">
+          <button class="play"><i class="fas fa-play"></i></button>
+        <div class="tempo">
+          <h2><span class="tempo-number">140</span> BPM</h2>
+          <input
+            type="range"
+            class="tempo-slider"
+            min="30"
+            max="240"
+            value="140"
+          />
+        </div>
+        <button class="reset"><i class="fas fa-trash"></i></button>    
+        <a href="https://github.com/DevPadd" target="_blank"><button class="github-link"><i class="fab fa-github-alt"></i></button></a> 
+    </nav>
+
+    <!-- javascript file -->
+    <script src="./script.js"></script>
+  </body>
+</html>
