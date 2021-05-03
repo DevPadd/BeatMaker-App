@@ -7,7 +7,7 @@ A pure javascript web app for making beats.
 - muting and unmuting tracks
 - reset button
 
-#upcoming features
+# upcoming features
 
 - dark/light mode toggler
 - responsive website
