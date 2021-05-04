@@ -13,5 +13,3 @@ A pure javascript web app for making beats.
 - responsive website
 
 note that this website is not mobile friendly yet. use chrome for the best experience.
-
-demo link: https://beatmaker-app.netlify.app/
